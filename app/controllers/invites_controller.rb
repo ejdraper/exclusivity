@@ -2,7 +2,7 @@ class InvitesController < ApplicationController
   unloadable
   
   skip_before_filter :login_required
-  before_filter :check_if_invite_required, :only => %w(index show)
+  before_filter :invite_required, :only => %w(index show)
   
   def index
     render
@@ -25,7 +25,7 @@ class InvitesController < ApplicationController
   end
   
   private
-    def check_if_invite_required
+    def invite_required
       # Redirect if we don't need an invite as we don't need the user to see this page
       redirect_to "/" and return if doesnt_need_an_invite
     end
