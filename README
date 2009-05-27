@@ -1,0 +1,29 @@
+Exclusivity
+-----------
+
+A plugin for locking down a site for private beta, using a basic invite system.
+
+  - By Elliott Draper
+
+Installation
+------------
+
+Once the plugin is installed into the app, you'll need to run:
+
+rake exclusivity:install:migrations
+
+This will copy the migration that the plugin needs over to your apps db/migrate folder. Then run:
+
+rake db:migrate
+
+as usual to setup the invite table.
+
+Once the plugin is installed and setup, all pages but the invite pages and login pages will be locked down. You'll need to login, or provide a valid invite code, to gain access to the site again. It assumes standard helpers for login pages (login_path etc). Invites can support expiry dates, or can be set with no expiry (expires_at set to nil).
+
+There is another rake task included for quickly creating new invite codes (with no expiry) - simply run:
+
+rake exclusivity:invites:create
+
+This will output ten invite codes that have been created and can be used to access the site.
+
+The plugin is fairly basic, but should suit a fair few private beta scenarios. Any questions, comments, or patches, please e-mail el@ejdraper.com.

@@ -1,0 +1,14 @@
+<h3>Sorry, we're invitation only at the minute!</h3>
+
+<p>
+  If you have an invite code, you can enter it here to check out the site:
+  <br />
+  <% form_tag invites_path do %>
+    <%= text_field :invite, :code %>
+    <%= submit_tag "Go" %>
+  <% end %>
+</p>
+
+<p>
+  Otherwise, if you've previously been invited and signed up, you can login <%= link_to "here", login_path %>.
+</p>

@@ -1,0 +1,9 @@
+<br />
+<% if @invite.nil? %>
+  <h3>Unable to find invite - please make sure the invite code is correct!</h3>
+  <p>
+    <%= link_to "Back", invites_path %>
+  </p>
+<% else %>
+  <h3>Your invite has been validated and you can now access the site. You can also sign up <%= link_to "here", signup_path %>!</h3>
+<% end %>
