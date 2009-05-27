@@ -8,11 +8,7 @@ A plugin for locking down a site for private beta, using a basic invite system.
 Installation
 ------------
 
-Once the plugin is installed into the app, you'll need to run:
-
-rake exclusivity:install:migrations
-
-This will copy the migration that the plugin needs over to your apps db/migrate folder. Then run:
+After the plugin is installed, just run:
 
 rake db:migrate
 
