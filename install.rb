@@ -1,2 +1,2 @@
 # Copies over migrations.
-rake exclusivity:install:migrations
+shell(rake exclusivity:install:migrations)
